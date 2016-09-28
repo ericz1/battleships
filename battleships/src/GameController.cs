@@ -119,6 +119,9 @@ public static class GameController
 		SwinGame.RefreshScreen();
 	}
 
+    /// <summary>
+    /// adds explosions upon play hit and plays sound effect  
+    /// </summary>
 	private static void PlayHitSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {
@@ -130,6 +133,9 @@ public static class GameController
 		UtilityFunctions.DrawAnimationSequence();
 	}
 
+    /// <summary>
+    /// adds a splash effect when a player misses and plays sound effect
+    /// </summary>
 	private static void PlayMissSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {

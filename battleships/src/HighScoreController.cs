@@ -16,8 +16,10 @@ using SwinGameSDK;
 /// </remarks>
 static class HighScoreController
 {
+    //width
 	private const int NAME_WIDTH = 3;
 
+    //scores left
 	private const int SCORES_LEFT = 490;
 	/// <summary>
 	/// The score structure is used to keep the name and
@@ -71,6 +73,7 @@ static class HighScoreController
 
 		_Scores.Clear();
 
+        //loop score number
 		int i = 0;
 
 		for (i = 1; i <= numScores; i++) {

@@ -9,7 +9,7 @@ using SwinGameSDK;
 
 public static class GameResources
 {
-
+    //Loading the following fonts
 	private static void LoadFonts()
 	{
 		NewFont("ArialLarge", "arial.ttf", 80);
@@ -18,6 +18,7 @@ public static class GameResources
 		NewFont("Menu", "ffaccess.ttf", 8);
 	}
 
+    //Loading images of backgrounds, ships etc
 	private static void LoadImages()
 	{
 		//Backgrounds
@@ -45,6 +46,7 @@ public static class GameResources
 
 	}
 
+    //loads sound effects
 	private static void LoadSounds()
 	{
 		NewSound("Error", "error.wav");
@@ -55,7 +57,8 @@ public static class GameResources
 		NewSound("Winner", "winner.wav");
 		NewSound("Lose", "lose.wav");
 	}
-
+    
+    //load backround music
 	private static void LoadMusic()
 	{
 		NewMusic("Background", "horrordrone.mp3");
@@ -156,6 +159,9 @@ public static class GameResources
 		EndLoadingScreen(width, height);
 	}
 
+    /// <summary>
+    /// the priave methods starts the loading screen
+    /// </summary>
 	private static void ShowLoadingScreen()
 	{
 		_Background = SwinGame.LoadBitmap(SwinGame.PathToResource("SplashBack.png", ResourceKind.BitmapResource));
@@ -173,6 +179,9 @@ public static class GameResources
 		PlaySwinGameIntro();
 	}
 
+    /// <summary>
+    /// plays swin game introduction
+    /// </summary>
 	private static void PlaySwinGameIntro()
 	{
 		const int ANI_X = 143;
@@ -198,7 +207,10 @@ public static class GameResources
 
 	}
 
-	private static void ShowMessage(string message, int number)
+    /// <summary>
+    /// presents a message and a number
+    /// </summary>
+    private static void ShowMessage(string message, int number)
 	{
 		const int TX = 310;
 		const int TY = 493;
@@ -220,6 +232,9 @@ public static class GameResources
 		SwinGame.ProcessEvents();
 	}
 
+    /// <summary>
+    /// close loading screen
+    /// </summary>
 	private static void EndLoadingScreen(int width, int height)
 	{
 		SwinGame.ProcessEvents();
